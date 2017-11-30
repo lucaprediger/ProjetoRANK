@@ -41,4 +41,44 @@ public class Pessoa implements Serializable {
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Universidade universidade;
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getRA() {
+        return RA;
+    }
+
+    public void setRA(Integer RA) {
+        this.RA = RA;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Universidade getUniversidade() {
+        return universidade;
+    }
+
+    public void setUniversidade(Universidade universidade) {
+        this.universidade = universidade;
+    }
 }
