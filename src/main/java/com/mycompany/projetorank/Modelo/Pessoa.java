@@ -42,6 +42,12 @@ public class Pessoa implements Serializable {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Universidade universidade;
 
+    public Pessoa() {
+        System.out.println("Esta sendo criada uma pessoa.");
+    }
+
+    
+    
     public Integer getID() {
         return ID;
     }

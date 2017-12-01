@@ -23,7 +23,7 @@ import org.hibernate.annotations.OnDeleteAction;
  */
 @Entity
 @Table(name = "TB_USUARIO")
-public class Usuario implements Serializable {
+public class Usuario extends Pessoa implements Serializable {
 
     @Id
     @GeneratedValue
@@ -48,4 +48,55 @@ public class Usuario implements Serializable {
     @OneToOne(mappedBy = "Usuario")
     @OnDelete(action = OnDeleteAction.CASCADE) //relacionamento tb_pessoa
     private Login login;
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public List<ExercicioUsuario> getExercicioUsuario() {
+        return exercicioUsuario;
+    }
+
+    public void setExercicioUsuario(List<ExercicioUsuario> exercicioUsuario) {
+        this.exercicioUsuario = exercicioUsuario;
+    }
+
+    public List<UsuarioPermissao> getUsuarioPermissao() {
+        return usuarioPermissao;
+    }
+
+    public void setUsuarioPermissao(List<UsuarioPermissao> usuarioPermissao) {
+        this.usuarioPermissao = usuarioPermissao;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Login getLogin() {
+        return login;
+    }
+
+    public void setLogin(Login login) {
+        this.login = login;
+    }
+    
+    
+    
 }
