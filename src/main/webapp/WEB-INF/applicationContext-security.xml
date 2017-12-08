@@ -18,8 +18,8 @@
 	</http>
 	<authentication-manager>
 		<authentication-provider>
-			<jdbc-user-service data-source-ref="ProjetoRank" 
-				authorities-by-username-query="SELECT u.login, p.permissao  
+			<jdbc-user-service data-source-ref="luca" 
+				authorities-by-username-query="SELECT u.login, p.permissao 
 								FROM Usuario u, usuario_permissao p 
 								WHERE u.codigo = p.usuario AND u.login = ?"
 				users-by-username-query="SELECT login, senha, ativo FROM Usuario WHERE login = ?" />

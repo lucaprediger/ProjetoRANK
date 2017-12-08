@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/ProjetoRank">
-
+<Context path="/financeiroutfpr" reloadable="true">
+  <Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/luca" password="utfprsh" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/luca" username="postgres"/>
+</Context>
