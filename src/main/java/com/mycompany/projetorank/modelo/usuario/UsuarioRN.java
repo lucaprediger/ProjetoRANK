@@ -1,6 +1,9 @@
 package com.mycompany.projetorank.modelo.usuario;
 
-import br.edu.utfpr.giuvane.modelo.categoria.CategoriaRN;
+
+
+
+import com.mycompany.projetorank.modelo.categoria.CategoriaRN;
 import java.util.List;
 
 public class UsuarioRN {

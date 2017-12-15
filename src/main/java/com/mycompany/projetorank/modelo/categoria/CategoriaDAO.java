@@ -1,6 +1,6 @@
-package br.edu.utfpr.giuvane.modelo.categoria;
+package com.mycompany.projetorank.modelo.categoria;
 
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.util.List;
 
 public interface CategoriaDAO {

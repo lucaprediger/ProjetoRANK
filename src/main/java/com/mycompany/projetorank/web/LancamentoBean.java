@@ -1,14 +1,11 @@
 package com.mycompany.projetorank.web;
 
-import br.edu.utfpr.giuvane.modelo.categoria.Categoria;
-import br.edu.utfpr.giuvane.modelo.cheque.Cheque;
-import br.edu.utfpr.giuvane.modelo.cheque.ChequeId;
-import br.edu.utfpr.giuvane.modelo.cheque.ChequeRN;
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.lancamento.Lancamento;
-import br.edu.utfpr.giuvane.modelo.lancamento.LancamentoRN;
-import br.edu.utfpr.giuvane.util.RNException;
-import br.edu.utfpr.giuvane.util.UtilException;
+
+import com.mycompany.projetorank.modelo.categoria.Categoria;
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.lancamento.Lancamento;
+import com.mycompany.projetorank.modelo.lancamento.LancamentoRN;
+import com.mycompany.projetorank.util.UtilException;
 import com.mycompany.projetorank.web.util.RelatorioUtil;
 import java.io.Serializable;
 import java.util.*;
@@ -47,37 +44,13 @@ public class LancamentoBean implements Serializable {
             return null;
     }
 
-    public void editar() {
-            Cheque cheque = this.editado.getCheque();
-            if (cheque != null) {
-                    this.numeroCheque = cheque.getChequeId().getCheque();
-            }
-
-    }
+    
 
     public void salvar() {
             this.editado.setUsuario(this.contextoBean.getUsuarioLogado());
             this.editado.setConta(this.contextoBean.getContaAtiva());
 
-            ChequeRN chequeRN = new ChequeRN(); 
-            ChequeId chequeId = null;
-            if (this.numeroCheque != null) {
-                    chequeId = new ChequeId();
-                    chequeId.setConta(this.contextoBean.getContaAtiva().getConta());
-                    chequeId.setCheque(this.numeroCheque);
-                    Cheque cheque = chequeRN.carregar(chequeId);
-                    FacesContext context = FacesContext.getCurrentInstance();
-                    if (cheque == null) {
-                            context.addMessage(null, new FacesMessage("Cheque não cadastrado"));
-                            return;
-                    } else if (cheque.getSituacao() == Cheque.SITUACAO_CHEQUE_CANCELADO) {
-                            context.addMessage(null, new FacesMessage("Cheque já cancelado"));
-                            return;				
-                    } else {
-                            this.editado.setCheque(cheque);
-                            chequeRN.baixarCheque(chequeId, this.editado);
-                    }
-            }
+            
 
 
             LancamentoRN lancamentoRN = new LancamentoRN();
@@ -87,19 +60,7 @@ public class LancamentoBean implements Serializable {
             this.lista = null;
     }
 
-    public void mudouCheque(ValueChangeEvent event) { 
-            Integer chequeAnterior = (Integer) event.getOldValue();
-            if (chequeAnterior != null) {
-                    ChequeRN chequeRN = new ChequeRN();
-                    try {
-                            chequeRN.desvinculaLancamento(contextoBean.getContaAtiva(), chequeAnterior);
-                    } catch (RNException e) {
-                            FacesContext context = FacesContext.getCurrentInstance();
-                            context.addMessage(null, new FacesMessage(e.getMessage()));
-                            return;
-                    }
-            }
-    }
+    
 
 
     public void excluir() {
@@ -124,8 +85,7 @@ public class LancamentoBean implements Serializable {
             parametrosRelatorio.put("numeroConta", contextoBean.getContaAtiva().getConta());
             parametrosRelatorio.put("dataInicial", this.getDataInicialRelatorio());
             parametrosRelatorio.put("dataFinal", this.getDataFinalRelatorio());
-            parametrosRelatorio.put("saldoAnterior", lancamentoRN.saldo(contextoBean.getContaAtiva(), 
-                    dataSaldo));
+            
             try {
                     this.arquivoRetorno = relatorioUtil.geraRelatorio(parametrosRelatorio, nomeRelatorioJasper,
                             nomeRelatorioSaida, RelatorioUtil.RELATORIO_PDF);
@@ -169,8 +129,7 @@ public class LancamentoBean implements Serializable {
                     inicio.add(Calendar.MONTH, -1);
 
                     LancamentoRN lancamentoRN = new LancamentoRN();
-                    this.saldoGeral = lancamentoRN.saldo(this.conta,
-                                    dataSaldo.getTime());
+                   
                     this.lista = lancamentoRN
                                     .listar(this.conta, inicio.getTime(), null);
 

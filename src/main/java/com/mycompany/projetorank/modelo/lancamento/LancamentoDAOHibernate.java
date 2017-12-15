@@ -1,8 +1,8 @@
-package br.edu.utfpr.giuvane.modelo.lancamento;
+package com.mycompany.projetorank.modelo.lancamento;
 
-import br.edu.utfpr.giuvane.modelo.categoria.Categoria;
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.dao.ConexaoHibernate;
+
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.dao.ConexaoHibernate;
 import java.util.*;
 import java.math.BigDecimal;
 import javax.persistence.EntityManager;
@@ -44,7 +44,6 @@ public class LancamentoDAOHibernate implements LancamentoDAO {
     }
 
     @SuppressWarnings("unchecked")
-    @Override
     public List<Lancamento> listar(Conta conta, Date dataInicio, Date dataFim) { 
             
         CriteriaBuilder cb = manager.getCriteriaBuilder();
@@ -106,4 +105,6 @@ public class LancamentoDAOHibernate implements LancamentoDAO {
         }
         return 0f;
     }
+
+    
 }

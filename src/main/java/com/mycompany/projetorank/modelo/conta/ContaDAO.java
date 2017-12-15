@@ -1,5 +1,10 @@
-package br.edu.utfpr.giuvane.modelo.conta;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+package com.mycompany.projetorank.modelo.conta;
+
+
+
+
+
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.util.List;
 public interface ContaDAO {
 	public void salvar(Conta conta);

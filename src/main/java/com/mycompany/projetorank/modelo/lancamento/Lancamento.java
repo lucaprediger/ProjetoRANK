@@ -1,9 +1,9 @@
-package br.edu.utfpr.giuvane.modelo.lancamento;
+package com.mycompany.projetorank.modelo.lancamento;
 
-import br.edu.utfpr.giuvane.modelo.categoria.Categoria;
-import br.edu.utfpr.giuvane.modelo.cheque.Cheque;
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+
+import com.mycompany.projetorank.modelo.categoria.Categoria;
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -46,8 +46,6 @@ public class Lancamento implements Serializable {
 	@Column(precision = 10, scale = 2) 
 	private BigDecimal		valor;
         
-        @OneToOne(fetch = FetchType.LAZY, mappedBy="lancamento") 
-	private Cheque		cheque;
         
 	public Integer getLancamento() {
 		return lancamento;
@@ -154,10 +152,5 @@ public class Lancamento implements Serializable {
 		return true;
 	}
         
-        public Cheque getCheque() {
-		return cheque;
-	}
-	public void setCheque(Cheque cheque) {
-		this.cheque = cheque;
-	}
+       
 }

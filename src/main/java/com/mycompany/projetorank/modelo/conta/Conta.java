@@ -1,6 +1,7 @@
-package br.edu.utfpr.giuvane.modelo.conta;
+package com.mycompany.projetorank.modelo.conta;
 
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.io.Serializable;
 import java.util.Date;
 

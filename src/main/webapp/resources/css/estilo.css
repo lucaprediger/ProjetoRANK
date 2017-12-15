@@ -4,7 +4,7 @@ body, td, th {
 }
 
 th {
-	background: url(#{resource['imagens:fundo_claro.png']}); 
+        background: url(#{resource[ ''imagens:fundo_claro.png']}) repeat-x;
 	min-height: 25px;
 	padding: 3px;
 }
@@ -27,7 +27,7 @@ img {
 }
 
 #barra_menu {
-	background: url(#{resource['imagens:fundo_barra_menu.png']}) repeat-x; 
+	background: url(#{resource[''imagens:fundo_barra_menu.png']}) repeat-x; 
 	min-height: 25px;
 	padding: 3px;
 	clear:both;

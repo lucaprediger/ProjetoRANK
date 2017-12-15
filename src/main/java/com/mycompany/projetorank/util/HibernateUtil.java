@@ -1,4 +1,4 @@
-package br.edu.utfpr.giuvane.util;
+package com.mycompany.projetorank.util;
 
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

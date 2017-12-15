@@ -1,8 +1,9 @@
 package com.mycompany.projetorank.web;
 
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.lancamento.Lancamento;
-import br.edu.utfpr.giuvane.modelo.lancamento.LancamentoRN;
+
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.lancamento.Lancamento;
+import com.mycompany.projetorank.modelo.lancamento.LancamentoRN;
 import java.util.*;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -22,7 +23,6 @@ public class PrincipalBean {
 			Calendar hoje = new GregorianCalendar();
 
 			LancamentoRN lancamentoRN = new LancamentoRN();
-			this.listaAteHoje = lancamentoRN.listar(conta, null, hoje.getTime());
 		}
 		return this.listaAteHoje;
 	}

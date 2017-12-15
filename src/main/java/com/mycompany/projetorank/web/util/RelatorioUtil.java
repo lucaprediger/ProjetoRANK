@@ -1,7 +1,8 @@
 package com.mycompany.projetorank.web.util;
 
 import com.mycompany.projetorank.modelo.dao.ConexaoHibernate;
-import br.edu.utfpr.giuvane.util.UtilException;
+import com.mycompany.projetorank.util.UtilException;
+
 import java.io.*;
 import java.sql.*;
 import java.util.HashMap;

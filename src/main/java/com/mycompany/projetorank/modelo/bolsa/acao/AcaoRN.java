@@ -1,8 +1,8 @@
-package br.edu.utfpr.giuvane.modelo.bolsa.acao;
+package com.mycompany.projetorank.modelo.bolsa.acao;
 
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
-import br.edu.utfpr.giuvane.util.UtilException;
-import br.edu.utfpr.giuvane.web.util.YahooFinanceUtil;
+
+import com.mycompany.projetorank.modelo.usuario.Usuario;
+import com.mycompany.projetorank.util.UtilException;
 import java.util.*;
 
 public class AcaoRN {
@@ -28,13 +28,7 @@ public class AcaoRN {
             for (Acao acao : this.listar(usuario)) {
                     acaoVirtual = new AcaoVirtual();
                     acaoVirtual.setAcao(acao);
-                    cotacao = YahooFinanceUtil.getInfoCotacao( YahooFinanceUtil.INDICE_ULTIMO_PRECO_DIA_ACAO, acao); 	
-                    if (cotacao != null) {
-                            ultimoPreco = new Float(cotacao).floatValue(); 
-                            acaoVirtual.setUltimoPreco(ultimoPreco);
-                            acaoVirtual.setTotal(ultimoPreco * acao.getQuantidade());
-                            listaAcaoVirtual.add(acaoVirtual);
-                    }
+                    
             }
             return listaAcaoVirtual;
     }

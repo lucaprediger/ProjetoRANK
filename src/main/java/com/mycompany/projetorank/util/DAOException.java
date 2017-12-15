@@ -1,4 +1,4 @@
-package br.edu.utfpr.giuvane.util;
+package com.mycompany.projetorank.util;
 
 public class DAOException extends Exception {
 

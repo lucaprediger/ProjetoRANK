@@ -1,9 +1,10 @@
-package br.edu.utfpr.giuvane.web;
+package com.mycompany.projetorank.web;
 
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.conta.ContaRN;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
-import br.edu.utfpr.giuvane.modelo.usuario.UsuarioRN;
+
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.conta.ContaRN;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
+import com.mycompany.projetorank.modelo.usuario.UsuarioRN;
 import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import javax.faces.application.FacesMessage;

@@ -1,4 +1,4 @@
-package br.edu.utfpr.giuvane.modelo.bolsa.acao;
+package com.mycompany.projetorank.modelo.bolsa.acao;
 
 public class AcaoVirtual {
 	private Acao	acao	= new Acao();

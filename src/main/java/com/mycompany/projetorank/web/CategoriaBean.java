@@ -1,12 +1,13 @@
-package br.edu.utfpr.giuvane.web;
+package com.mycompany.projetorank.web;
 
+import com.mycompany.projetorank.modelo.categoria.Categoria;
+import com.mycompany.projetorank.modelo.categoria.CategoriaRN;
 import java.util.*;
 import javax.faces.bean.*;
 import javax.faces.model.SelectItem;
 import org.primefaces.event.NodeSelectEvent;
 import org.primefaces.model.TreeNode;
 import org.primefaces.model.DefaultTreeNode;
-import br.edu.utfpr.giuvane.modelo.categoria.*;
 
 @ManagedBean(name = "categoriaBean")
 @RequestScoped

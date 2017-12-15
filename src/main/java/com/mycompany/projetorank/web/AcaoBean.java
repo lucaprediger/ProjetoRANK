@@ -1,10 +1,9 @@
-package br.edu.utfpr.giuvane.web;
+package com.mycompany.projetorank.web;
 
-import br.edu.utfpr.giuvane.modelo.bolsa.acao.Acao;
-import br.edu.utfpr.giuvane.modelo.bolsa.acao.AcaoRN;
-import br.edu.utfpr.giuvane.modelo.bolsa.acao.AcaoVirtual;
-import br.edu.utfpr.giuvane.web.ContextoBean;
-import br.edu.utfpr.giuvane.web.util.YahooFinanceUtil;
+
+import com.mycompany.projetorank.modelo.bolsa.acao.Acao;
+import com.mycompany.projetorank.modelo.bolsa.acao.AcaoRN;
+import com.mycompany.projetorank.modelo.bolsa.acao.AcaoVirtual;
 import java.util.*;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
@@ -51,10 +50,7 @@ public class AcaoBean {
 		return this.lista;
 	}
 
-	public String getLinkCodigoAcao() { 
-		this.linkCodigoAcao = YahooFinanceUtil.getSiglaLink(this.selecionada.getAcao());
-		return this.linkCodigoAcao;
-	}
+	
 
 	public PieChartModel getPercentualQuantidade() { 
 		List<AcaoVirtual> acoes = this.getLista();

@@ -1,7 +1,8 @@
 package com.mycompany.projetorank.modelo.bolsa.acao;
 
-import br.edu.utfpr.giuvane.modelo.dao.ConexaoHibernate;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+
+import com.mycompany.projetorank.modelo.dao.ConexaoHibernate;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;

@@ -1,8 +1,8 @@
-package br.edu.utfpr.giuvane.modelo.categoria;
+package com.mycompany.projetorank.modelo.categoria;
 
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.dao.ConexaoHibernate;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
+
+import com.mycompany.projetorank.modelo.dao.ConexaoHibernate;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -102,4 +102,6 @@ public class CategoriaDAOHibernate implements CategoriaDAO {
             return lista;
         */
     }
+
+    
 }

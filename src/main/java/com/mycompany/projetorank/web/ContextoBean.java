@@ -1,8 +1,9 @@
-package br.edu.utfpr.giuvane.web;
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.conta.ContaRN;
-import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
-import br.edu.utfpr.giuvane.modelo.usuario.UsuarioRN;
+package com.mycompany.projetorank.web;
+
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.conta.ContaRN;
+import com.mycompany.projetorank.modelo.usuario.Usuario;
+import com.mycompany.projetorank.modelo.usuario.UsuarioRN;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;

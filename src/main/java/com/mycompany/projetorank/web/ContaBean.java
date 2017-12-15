@@ -1,8 +1,9 @@
 package com.mycompany.projetorank.web;
 
-import br.edu.utfpr.giuvane.modelo.conta.Conta;
-import br.edu.utfpr.giuvane.modelo.conta.ContaRN;
-import br.edu.utfpr.giuvane.util.UtilException;
+
+import com.mycompany.projetorank.modelo.conta.Conta;
+import com.mycompany.projetorank.modelo.conta.ContaRN;
+import com.mycompany.projetorank.util.UtilException;
 import com.mycompany.projetorank.web.util.RelatorioUtil;
 import java.util.HashMap;
 import java.util.List;

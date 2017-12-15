@@ -1,9 +1,10 @@
-package br.edu.utfpr.giuvane.web.converter;
+package com.mycompany.projetorank.web.converter;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.*;
-import br.edu.utfpr.giuvane.modelo.categoria.*;
+import com.mycompany.projetorank.modelo.categoria.Categoria;
+import com.mycompany.projetorank.modelo.categoria.CategoriaRN;
 
 @FacesConverter(forClass = Categoria.class) 
 public class CategoriaConverter implements Converter {
